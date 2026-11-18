@@ -184,3 +184,47 @@
       <article class="card sponsored" data-category="comedy">
         <div>
           <div class="tag-row">
+SPONSOR SPOT AVAILABLE
+Branson, MO
+
+Feature Your Show or Attraction Here
+Put your theater, magic show, zipline, or museum directly in front of families researching Branson tickets.
+Sponsor Perk: Includes direct booking link, custom promo code, and homepage rotation.
+
+Claim This Spot ($49/mo) →
+Smart Branson Show & Traffic Tips
+
+Use the Colored Routes: Highway 76 gets backed up before 2:00 PM matinees and 7:30 PM evening shows. Use Branson's Blue, Yellow, and Red bypass routes to cut drive times in half.
+Bundle Morning & Evening Shows: Many theaters offer 10:00 AM morning shows alongside 8:00 PM evening performances, leaving your afternoon open for Branson Landing or Table Rock Lake.
+Look for Combo Passes: Buying multi-show passes through authorized ticket partners often saves 15% to 25% compared to single walk-up box office rates.
+© 2026 BransonBlastUSA.com. All rights reserved.
+
+Home |
+Shows |
+Dining |
+Advertise |
+Privacy Policy
+
+function filterCards(category, btn) {
+document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+btn.classList.add('active');
+document.querySelectorAll('#shows-grid .card').forEach(card => {
+if (category === 'all' || card.dataset.category === category) {
+card.style.display = 'flex';
+} else {
+card.style.display = 'none';
+}
+});
+}
+
+### Step 2: Paste Into GitHub
+1. Open your **`bransonblastusa`** repository on GitHub.
+2. Click **Add file** > **Create new file**.
+3. Type **`shows.html`** in the file name box.
+4. Paste the entire code block above into the editor.
+5. Click **Commit changes**.
+
+<FollowUp>
+Would you like **`dining.html`** next to complete your main five-page core site, or would you like step-by-step instructions to connect your **`bransonblastusa`** repository to **Cloudflare Pages** so your site goes live?
+</FollowUp>
+Try without personalization
