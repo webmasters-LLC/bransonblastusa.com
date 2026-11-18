@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the best live music shows, comedy theaters, and family attractions in Branson, Missouri. Compare schedules, tips, and ticket deals.">
+  <title>Branson Shows, Theaters & Attractions | Branson Blast USA</title>
+  <style>
+    :root {
+      --primary: #1b365d;
+      --accent: #d9534f;
+      --gold: #f0ad4e;
+      --bg: #f8f9fa;
+      --card: #ffffff;
+      --text: #222222;
+      --muted: #555555;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Navigation */
+    header { background: var(--primary); color: #fff; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: 0.5px; }
+    .logo span { color: var(--gold); }
+    nav { display: flex; gap: 1.25rem; flex-wrap: wrap; margin-top: 0.5rem; }
+    nav a { color: #fff; font-weight: 600; font-size: 0.95rem; }
+    nav a:hover { color: var(--gold); }
+
+    /* Page Banner */
+    .page-header { background: var(--primary); color: #fff; text-align: center; padding: 3.5rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.12); }
+    .page-header h1 { font-size: 2.2rem; margin-bottom: 0.75rem; }
+    .page-header p { font-size: 1.1rem; max-width: 700px; margin: 0 auto; color: #e2e8f0; }
+
+    /* Container & Filter Bar */
+    .container { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+    .filter-bar { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .filter-btn { background: var(--card); border: 2px solid var(--primary); color: var(--primary); padding: 0.55rem 1.15rem; border-radius: 6px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: all 0.2s; }
+    .filter-btn:hover, .filter-btn.active { background: var(--primary); color: #fff; }
+
+    /* Ad Banner Slot */
+    .ad-slot { background: #e9ecef; border: 2px dashed #adb5bd; border-radius: 8px; padding: 1.25rem; text-align: center; margin-bottom: 2.25rem; color: var(--muted); }
+    .ad-slot strong { color: var(--primary); display: block; margin-bottom: 0.25rem; }
+
+    /* Show Cards Grid */
+    .section-title { font-size: 1.75rem; color: var(--primary); margin-bottom: 1.5rem; border-bottom: 3px solid var(--gold); display: inline-block; padding-bottom: 0.25rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+    .card { background: var(--card); border-radius: 10px; padding: 1.6rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--primary); }
+    .card.sponsored { border-top: 4px solid var(--gold); background: #fffdf7; }
+    .tag-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+    .tag { display: inline-block; background: #eef2f7; color: var(--primary); font-size: 0.78rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 4px; }
+    .tag.gold { background: var(--gold); color: #1b365d; }
+    .location { font-size: 0.82rem; color: var(--muted); font-weight: 600; }
+    .card h3 { font-size: 1.28rem; margin-bottom: 0.5rem; color: var(--primary); }
+    .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
+    .tip { background: #f1f5f9; padding: 0.65rem 0.85rem; border-radius: 6px; font-size: 0.86rem; color: #334155; margin-bottom: 1.25rem; }
+    .btn { display: block; text-align: center; background: var(--accent); color: #fff; padding: 0.75rem 1.25rem; border-radius: 6px; font-weight: 700; transition: background 0.2s; }
+    .btn:hover { background: #c9302c; }
+
+    /* Planning Tips Box */
+    .tips-box { background: var(--card); border-radius: 10px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 2rem; }
+    .tips-box h3 { color: var(--primary); margin-bottom: 0.75rem; font-size: 1.3rem; }
+    .tips-box ul { margin-left: 1.4rem; color: var(--muted); }
+    .tips-box li { margin-bottom: 0.5rem; }
+
+    /* Footer */
+    footer { background: var(--primary); color: #cbd5e1; text-align: center; padding: 2.5rem 1.5rem; margin-top: 2rem; font-size: 0.9rem; }
+    footer a { color: var(--gold); margin: 0 0.5rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Branson<span>Blast</span>USA</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shows.html">Shows & Tickets</a>
+      <a href="dining.html">Dining & Deals</a>
+      <a href="advertise.html">Advertise With Us</a>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Branson Live Shows & Top Attractions</h1>
+    <p>From iconic 76 Country Boulevard theaters to thrilling Ozark roller coasters and Table Rock Lake cruises.</p>
+  </section>
+
+  <main class="container">
+
+    <!-- Top Affiliate / Sponsor Slot -->
+    <div class="ad-slot">
+      <strong>FEATURED THEATER OR TICKET PARTNER</strong>
+      <span>Want your show featured at the top of our Branson ticket guide? <a href="advertise.html" style="color:#d9534f; font-weight:bold;">Reserve a Spotlight Listing.</a></span>
+    </div>
+
+    <!-- Category Filter Buttons -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterCards('all', this)">All Entertainment</button>
+      <button class="filter-btn" onclick="filterCards('music', this)">Live Music & Variety</button>
+      <button class="filter-btn" onclick="filterCards('comedy', this)">Comedy & Magic</button>
+      <button class="filter-btn" onclick="filterCards('attractions', this)">Parks & Outdoors</button>
+    </div>
+
+    <h2 class="section-title">Must-See Branson Lineup</h2>
+
+    <div class="grid" id="shows-grid">
+
+      <!-- Card 1 -->
+      <article class="card" data-category="music">
+        <div>
+          <div class="tag-row">
+            <span class="tag">LIVE MUSIC & STAGE</span>
+            <span class="location">Shepherd of the Hills Expy</span>
+          </div>
+          <h3>Sight & Sound Theatres</h3>
+          <p>Massive wrap-around stage productions bringing epic stories to life with live animals, soaring sets, and original orchestral scores.</p>
+          <div class="tip"><strong>Visitor Tip:</strong> Book center-orchestra seats early for major holiday and weekend matinees.</div>
+        </div>
+        <!-- Replace # with your Viator / Tripadvisor affiliate link -->
+        <a href="advertise.html" class="btn">Check Show Dates & Deals &rarr;</a>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" data-category="attractions">
+        <div>
+          <div class="tag-row">
+            <span class="tag">THEME PARK</span>
+            <span class="location">Indian Point Rd</span>
+          </div>
+          <h3>Silver Dollar City</h3>
+          <p>An 1880s-style Ozark theme park packed with record-breaking coasters, live bluegrass craftsmen, and famous seasonal festivals.</p>
+          <div class="tip"><strong>Visitor Tip:</strong> Arrive 45 minutes before rope drop and use the back-road route via Shepherd of the Hills Expressway to skip Hwy 76 traffic.</div>
+        </div>
+        <!-- Replace # with your affiliate link -->
+        <a href="advertise.html" class="btn">Compare Park Tickets &rarr;</a>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" data-category="music">
+        <div>
+          <div class="tag-row">
+            <span class="tag">FAMILY VARIETY</span>
+            <span class="location">W 76 Country Blvd</span>
+          </div>
+          <h3>The Haygoods</h3>
+          <p>High-energy sibling show featuring over 20 instruments, modern country and rock hits, tap dancing, and special light effects.</p>
+          <div class="tip"><strong>Visitor Tip:</strong> Great choice for multi-generational groups with kids and teens.</div>
+        </div>
+        <!-- Replace # with your affiliate link -->
+        <a href="advertise.html" class="btn">View Ticket Options &rarr;</a>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card" data-category="comedy">
+        <div>
+          <div class="tag-row">
+            <span class="tag">COMEDY & COUNTRY</span>
+            <span class="location">W 76 Country Blvd</span>
+          </div>
+          <h3>Presleys' Country Jubilee</h3>
+          <p>Branson's original Strip theater family blending classic country, southern gospel, and slapstick Ozark comedy.</p>
+          <div class="tip"><strong>Visitor Tip:</strong> Try the intermission treats in the lobby—a longtime Branson tradition.</div>
+        </div>
+        <!-- Replace # with your affiliate link -->
+        <a href="advertise.html" class="btn">View Ticket Options &rarr;</a>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="card" data-category="attractions">
+        <div>
+          <div class="tag-row">
+            <span class="tag">DINNER CRUISE</span>
+            <span class="location">Table Rock Lake</span>
+          </div>
+          <h3>Showboat Branson Belle</h3>
+          <p>A two-hour paddlewheel cruise across scenic Table Rock Lake complete with a three-course meal and live variety entertainment.</p>
+          <div class="tip"><strong>Visitor Tip:</strong> Sunset cruises offer the best lake views from the top wrap-around decks.</div>
+        </div>
+        <!-- Replace # with your affiliate link -->
+        <a href="advertise.html" class="btn">Check Cruise Schedules &rarr;</a>
+      </article>
+
+      <!-- Card 6 (Sponsor Placeholder) -->
+      <article class="card sponsored" data-category="comedy">
+        <div>
+          <div class="tag-row">
